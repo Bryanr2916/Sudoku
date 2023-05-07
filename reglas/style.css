@@ -1,0 +1,26 @@
+/*Paleta de colores: https://coolors.co/cc2936-6b818c-231123-eee5e9-0e273c
+cc2936: Rojo
+6b818c: Azúl claro
+231123:Azúl oscuro
+eee5e9: Blanco
+0e273c: Azúl fuerte
+*/
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background-color: #eee5e9;
+    color: #0e273c;
+}
+
+.titulo
+{
+    text-align: center;
+}
+
+h1
+{
+    background-color: #231123;
+    border-radius: 12px;
+    color: #eee5e9;
+}

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--animate css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--google fonts-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap'); </style>
+  
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
+    <title>Sudoku</title>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/puzzles.js"></script>
+    <script src="./js/timer.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sudoku</h1>
+            <div id="alert-msg" class="alert" style="display: none;">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <span id="alert-msg-text"></span>
+              </div>
+            <!--<nav class="level-dificulty-selector">
+                <a>Dificultad: </a>
+                <a id="level-selector-0" class="under-line" onclick="selectLevel(0)">Fácil </a>
+                <a id="level-selector-1" onclick="selectLevel(1)">Medio </a>
+                <a id="level-selector-2" onclick="selectLevel(2)">Difícil </a>
+            </nav>-->
+            
+        </div>
+        <div class="main-content">
+            <div class="board-header">
+                <p id="dificulty">Fácil</p>
+                <p id="errors">Errores <span></span>/3</p>
+                <p id="time">Tiempo: 00:00</p>
+            </div>
+            <div class="board">
+
+            </div>
+        </div>
+        <div class="controls">
+            <div class="actions">
+                <div class="action" onclick="pausePlay()">
+                    <span id="pause-play-icon" class="material-symbols-outlined">stop</span>
+                    <span id="pause-play-detail">Pausar</span>
+                </div>
+                <div class="action" onclick="addGameStack(0)">
+                    <span class="material-symbols-outlined">delete</span>
+                    <span>Borrar</span>
+                </div>
+                <div class="action" onclick="getHint()">
+                    <span class="material-symbols-outlined">tips_and_updates</span>
+                    <span>Pistas (<b id="hints">3</b>)</span>
+                </div>
+                <div class="action" onclick="solve()">
+                    <span class="material-symbols-outlined">extension</span>
+                    <span>Resolver</span>
+                </div>
+            </div>
+            <div class="numbers">
+                <div class="number" onclick="addGameStack(1)">
+                    <span>1</span>
+                </div>
+                <div class="number" onclick="addGameStack(2)">
+                    <span>2</span>
+                </div>
+                <div class="number" onclick="addGameStack(3)">
+                    <span>3</span>
+                </div>
+                <div class="number" onclick="addGameStack(4)">
+                    <span>4</span>
+                </div>
+                <div class="number" onclick="addGameStack(5)">
+                    <span>5</span>
+                </div>
+                <div class="number" onclick="addGameStack(6)">
+                    <span>6</span>
+                </div>
+                <div class="number" onclick="addGameStack(7)">
+                    <span>7</span>
+                </div>
+                <div class="number" onclick="addGameStack(8)">
+                    <span>8</span>
+                </div>
+                <div class="number" onclick="addGameStack(9)">
+                    <span>9</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
